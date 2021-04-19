@@ -1,4 +1,4 @@
-package taozi.entities;
+package com.taozi.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

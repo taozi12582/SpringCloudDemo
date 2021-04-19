@@ -1,8 +1,8 @@
-package taozi.dao;
+package com.taozi.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import taozi.entities.Payment;
+import com.taozi.entities.Payment;
 
 @Mapper
 public interface PaymentDao {

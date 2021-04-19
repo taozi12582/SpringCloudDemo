@@ -1,7 +1,6 @@
-package taozi.service;
+package com.taozi.service;
 
-import org.apache.ibatis.annotations.Param;
-import taozi.entities.Payment;
+import com.taozi.entities.Payment;
 
 public interface PaymentService {
     int create(Payment payment);
