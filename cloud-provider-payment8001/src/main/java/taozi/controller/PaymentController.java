@@ -1,12 +1,10 @@
 package taozi.controller;
 
+import com.taozi.entities.CommonResult;
+import com.taozi.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
-import taozi.entities.CommonResult;
-import taozi.entities.Payment;
+import org.springframework.web.bind.annotation.*;
+
 import taozi.service.PaymentService;
 
 import javax.annotation.Resource;
@@ -21,6 +19,7 @@ public class PaymentController {
     @PostMapping(value = "/payment/create")
     public CommonResult create(Payment payment) {
         int res = paymentService.create(payment);
+        System.out.println(payment.toString());
         log.info("---插入结果：" + res);
         if (res > 0) {
             return new CommonResult(200, "插入成功", res);
@@ -32,7 +31,7 @@ public class PaymentController {
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment paymentById = paymentService.getPaymentById(id);
-        log.info("---查询结果：" + paymentById.toString());
+//        log.info("---查询结果：" + paymentById.toString());
         if (paymentById != null) {
             return new CommonResult(200, "查询成功", paymentById);
         } else {
