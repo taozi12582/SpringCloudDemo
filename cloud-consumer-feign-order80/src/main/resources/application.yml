@@ -12,3 +12,9 @@ ribbon:
   ReadTimeout: 5000
   #读取资源时间
   ConnectTimeout: 5000
+
+logging:
+  level:
+#    feign日志以什么级别监控哪个接口
+    com.taozi.service.PaymentFeignService: debug
+    
