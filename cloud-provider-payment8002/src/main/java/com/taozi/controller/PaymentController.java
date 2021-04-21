@@ -1,6 +1,9 @@
 package com.taozi.controller;
 
 
+import com.taozi.entities.CommonResult;
+import com.taozi.entities.Payment;
+import com.taozi.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -9,9 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.taozi.entities.CommonResult;
-import com.taozi.entities.Payment;
-import com.taozi.service.PaymentService;
 
 import javax.annotation.Resource;
 import java.util.List;
