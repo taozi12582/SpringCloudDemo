@@ -12,3 +12,7 @@ ribbon:
   ReadTimeout: 5000
   #读取资源时间
   ConnectTimeout: 5000
+
+feign:
+  hystrix:
+    enabled: true
